@@ -1,0 +1,21 @@
+%h1 Listing supplement_groups
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @supplement_groups.each do |supplement_group|
+    %tr
+      %td= supplement_group.name
+      %td= supplement_group.description
+      %td= link_to 'Show', supplement_group
+      %td= link_to 'Edit', edit_supplement_group_path(supplement_group)
+      %td= link_to 'Destroy', supplement_group, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Supplement group', new_supplement_group_path

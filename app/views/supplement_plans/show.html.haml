@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @supplement_plan.user_id
+%p
+  %b Name:
+  = @supplement_plan.name
+%p
+  %b Description:
+  = @supplement_plan.description
+
+= link_to 'Edit', edit_supplement_plan_path(@supplement_plan)
+\|
+= link_to 'Back', supplement_plans_path

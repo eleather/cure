@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @supplement.name
+%p
+  %b Supplement group:
+  = @supplement.supplement_group_id
+%p
+  %b Description:
+  = @supplement.description
+%p
+  %b Dose:
+  = @supplement.dose
+
+= link_to 'Edit', edit_supplement_path(@supplement)
+\|
+= link_to 'Back', supplements_path

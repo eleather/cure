@@ -1,0 +1,21 @@
+%h1 Listing user_supplements
+
+%table
+  %tr
+    %th Plan
+    %th Supplement
+    %th
+    %th
+    %th
+
+  - @user_supplements.each do |user_supplement|
+    %tr
+      %td= user_supplement.plan_id
+      %td= user_supplement.supplement_id
+      %td= link_to 'Show', user_supplement
+      %td= link_to 'Edit', edit_user_supplement_path(user_supplement)
+      %td= link_to 'Destroy', user_supplement, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User supplement', new_user_supplement_path

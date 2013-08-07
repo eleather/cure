@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Plan:
+  = @user_supplement.plan_id
+%p
+  %b Supplement:
+  = @user_supplement.supplement_id
+
+= link_to 'Edit', edit_user_supplement_path(@user_supplement)
+\|
+= link_to 'Back', user_supplements_path

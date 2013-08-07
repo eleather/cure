@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @supplement_group.name
+%p
+  %b Description:
+  = @supplement_group.description
+
+= link_to 'Edit', edit_supplement_group_path(@supplement_group)
+\|
+= link_to 'Back', supplement_groups_path

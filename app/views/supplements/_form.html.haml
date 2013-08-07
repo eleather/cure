@@ -1,0 +1,11 @@
+= simple_form_for(@supplement) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :supplement_group_id
+    = f.input :description
+    = f.input :dose
+
+  .form-actions
+    = f.button :submit
